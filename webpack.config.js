@@ -7,8 +7,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    //webpack兼容性配置
     environment: {
-      arrowFunction: false
+      arrowFunction: false, //不允许箭头函数
     }
   },
   mode: 'production',
@@ -38,6 +39,29 @@ module.exports = {
           'ts-loader'
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      browsers: 'last 2 versions'
+                    }
+                  ]
+                ]
+              }
+            }
+          },
+          "sass-loader"
+        ]
       }
     ]
   },

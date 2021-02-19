@@ -1,0 +1,57 @@
+$bg-color: #b7d4a8; //背景色
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  font: bold 20px "Courier";
+}
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: $bg-color;
+  margin: 100px auto;
+  border: 10px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  #stage {
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+    position: relative;
+    #snake {
+      >li {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border: 1px solid $bg-color;
+        position: absolute;
+      }
+    }
+    #food {
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border: 1px solid $bg-color;
+      position: absolute;
+      left: 40px;
+      top: 100px;
+      border-radius: 50%;
+    }
+  }
+  #score {
+    width: 304px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

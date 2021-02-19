@@ -1,1 +1,0 @@
-!function(){"use strict";console.log(579),console.log("1231322123");const o={a:"asadfasdasdf"};console.log(o),console.log(Promise),console.log("skdjfks")}();

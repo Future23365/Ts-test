@@ -1,13 +1,7 @@
-function sum(a: number, b: number): number {
-  return a + b
-}
-console.log(sum(123, 456))
-console.log('1231322123')
-let c = 'aaa'
-let b = c
-const d = {a: '123'}
-d.a = 'asadfasdasdf'
-console.log(d)
-console.log(Promise)
-import { a } from './a'
-console.log(a)
+import './style/index.scss';
+import Food from './Food';
+import ScorePanel from './ScorePanel'
+const food = new Food();
+console.log(food.X, food.Y)
+food.change()
+// const scorePanel = new ScorePanel()
