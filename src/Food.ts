@@ -17,8 +17,8 @@ export default class Food {
   }
 
   change() {
-    let top = Math.round(Math.random() * this.maxPosition) * 10
-    let left = Math.round(Math.random() * this.maxPosition) * 10
+    let top = Math.round(Math.random() * this.maxPosition) * 10;
+    let left = Math.round(Math.random() * this.maxPosition) * 10;
 
     this.element.style.left = `${left}px`;
     this.element.style.top = `${top}px`;
